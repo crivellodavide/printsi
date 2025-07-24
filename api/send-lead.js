@@ -6,14 +6,24 @@ export default async function handler(req, res) {
     return;
   }
 
-  const { nome, citta, email } = req.body;
+  let body = req.body;
+  // Fix: se body è stringa, parsifica
+  if (typeof body === 'string') {
+    try {
+      body = JSON.parse(body);
+    } catch (e) {
+      res.status(400).json({ error: 'Body JSON malformato' });
+      return;
+    }
+  }
+
+  const { nome, citta, email } = body;
 
   if (!nome || !citta || !email) {
     res.status(400).json({ error: 'Dati mancanti' });
     return;
   }
 
-  // CHIAVE API DIRETTA
   const resend = new Resend('re_L2v8q85T_7A2HpUUH7D2wHXh7xyNnpnNz');
 
   try {
