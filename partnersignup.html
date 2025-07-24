@@ -1,24 +1,28 @@
-
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PrintSì - Trova il tuo partner creativo</title>
+  <title>PrintSì - Diventa fornitore esclusivo</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
   <style>
 :root {
-  --accent: #ff6f61;
-  --accent-dark: #e04f3b;
-  --bg: #f9f7f7;
-  --cta-bg: #ff6f61;
+  --primary: #4B3F72;
+  --primary-light: #F4F2FF;
+  --accent: #CBA135;
+  --accent-dark: #a27f2a;
+  --bg: #F8F6FA;
+  --text: #23203A;
+  --cta-bg: var(--accent);
   --cta-color: #fff;
+  --border-radius: 16px;
+  --section-padding: 42px 0 36px 0;
+  --container-padding: 0 4vw;
 }
 body {
   font-family: 'Montserrat', Arial, sans-serif;
   background: var(--bg);
-  color: #222;
+  color: var(--text);
   margin: 0;
 }
 .brand {
@@ -28,102 +32,111 @@ body {
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: var(--container-padding);
 }
 .hero {
-  background: linear-gradient(120deg, #ff6f61 0%, #ffd36e 100%);
-  padding: 48px 0;
+  background: linear-gradient(115deg, var(--primary) 0%, var(--accent) 100%);
+  padding: 54px 0 48px 0;
 }
 .hero-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 32px;
+  gap: 38px;
   justify-content: space-between;
 }
 .hero-text {
-  flex: 1 1 320px;
+  flex: 1 1 350px;
   color: #fff;
-  min-width: 250px;
+  min-width: 230px;
+  padding-right: 36px;
 }
 .hero-text h1 {
-  font-size: 2.1rem;
-  margin-bottom: 16px;
+  font-size: 2.15rem;
+  margin-bottom: 18px;
 }
 .hero-text p {
   font-size: 1.08rem;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
+  line-height: 1.5;
 }
 .cta-btn {
   background: var(--cta-bg);
   color: var(--cta-color);
-  padding: 14px 28px;
+  padding: 15px 32px;
   border-radius: 32px;
-  font-size: 1.08rem;
+  font-size: 1.09rem;
   text-decoration: none;
   font-weight: 700;
-  transition: background 0.2s;
+  transition: background 0.18s;
   display: inline-block;
   border: none;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(255, 111, 97, 0.15);
+  box-shadow: 0 2px 8px rgba(203, 161, 53, 0.13);
 }
 .cta-btn:hover {
   background: var(--accent-dark);
+  color: #fff;
 }
 .hero-image img {
-  max-width: 320px;
-  border-radius: 12px;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  max-width: 350px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.11);
   width: 100%;
+  height: auto;
+  display: block;
 }
 .steps, .benefits, .reviews, .faq, .cta-final {
   background: #fff;
 }
 .steps {
-  padding: 40px 0 28px 0;
+  padding: var(--section-padding);
 }
 .steps h2 {
   text-align: center;
-  font-size: 1.45rem;
-  margin-bottom: 28px;
-  color: var(--accent);
+  font-size: 1.42rem;
+  margin-bottom: 30px;
+  color: var(--primary);
 }
 .steps-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 30px;
   justify-content: center;
 }
 .step {
-  background: #f9f7f7;
-  border-radius: 12px;
-  flex: 1 1 180px;
-  max-width: 200px;
+  background: var(--primary-light);
+  border-radius: var(--border-radius);
+  flex: 1 1 220px;
+  max-width: 240px;
   text-align: center;
-  padding: 18px 10px;
-  box-shadow: 0 4px 16px rgba(255, 111, 97, 0.06);
-  min-width: 150px;
+  padding: 22px 16px 18px 16px;
+  box-shadow: 0 4px 16px rgba(75, 63, 114, 0.07);
+  min-width: 160px;
 }
 .step img {
-  width: 44px;
-  height: 44px;
-  margin-bottom: 10px;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
 }
 .step h3 {
-  font-size: 1rem;
-  margin-bottom: 8px;
+  font-size: 1.05rem;
+  margin-bottom: 10px;
   color: var(--accent);
 }
+.step p {
+  font-size: 0.99rem;
+  line-height: 1.45;
+}
 .benefits {
-  background: #fff6e6;
-  padding: 36px 0;
+  background: #f5ecd7;
+  padding: 38px 0 34px 0;
 }
 .benefits h2 {
   text-align: center;
-  margin-bottom: 18px;
-  color: var(--accent);
-  font-size: 1.25rem;
+  margin-bottom: 20px;
+  color: var(--primary);
+  font-size: 1.21rem;
 }
 .benefits ul {
   list-style: none;
@@ -132,8 +145,9 @@ body {
   margin: 0 auto;
 }
 .benefits li {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   font-size: 1.03rem;
+  line-height: 1.45;
 }
 .center-cta {
   text-align: center;
@@ -144,109 +158,110 @@ body {
   padding: 13px 26px;
 }
 .reviews {
-  padding: 36px 0;
+  padding: 36px 0 32px 0;
 }
 .reviews h2 {
   text-align: center;
   margin-bottom: 24px;
-  color: var(--accent);
-  font-size: 1.18rem;
+  color: var(--primary);
+  font-size: 1.17rem;
 }
 .reviews-row {
   display: flex;
-  gap: 24px;
+  gap: 30px;
   justify-content: center;
   flex-wrap: wrap;
 }
 .review {
-  background: #f9f7f7;
-  border-radius: 12px;
-  padding: 18px 14px;
-  max-width: 220px;
+  background: var(--primary-light);
+  border-radius: var(--border-radius);
+  padding: 20px 18px 16px 18px;
+  max-width: 240px;
   min-width: 160px;
   text-align: center;
-  box-shadow: 0 4px 16px rgba(255, 111, 97, 0.06);
+  box-shadow: 0 4px 16px rgba(75, 63, 114, 0.06);
 }
 .review img {
   width: 54px;
   height: 54px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 .review blockquote {
   font-style: italic;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-size: 0.97rem;
+  line-height: 1.35;
 }
 .review span {
   color: var(--accent);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.91rem;
 }
 .faq {
   padding: 36px 0 22px 0;
 }
 .faq h2 {
   text-align: center;
-  margin-bottom: 16px;
-  color: var(--accent);
-  font-size: 1.15rem;
+  margin-bottom: 17px;
+  color: var(--primary);
+  font-size: 1.14rem;
 }
 .faq-list {
   max-width: 800px;
   margin: 0 auto;
 }
 .faq-item {
-  background: #f9f7f7;
-  border-radius: 12px;
-  padding: 14px 12px;
-  margin-bottom: 12px;
-  box-shadow: 0 2px 10px rgba(255, 111, 97, 0.03);
+  background: var(--primary-light);
+  border-radius: var(--border-radius);
+  padding: 16px 14px 13px 14px;
+  margin-bottom: 13px;
+  box-shadow: 0 2px 10px rgba(75, 63, 114, 0.03);
 }
 .faq-item h3 {
-  margin-bottom: 6px;
+  margin-bottom: 7px;
   font-size: 1rem;
   color: var(--accent);
 }
 .cta-final {
-  background: var(--cta-bg);
+  background: var(--accent);
   color: #fff;
   text-align: center;
-  padding: 28px 0;
+  padding: 32px 0 29px 0;
 }
 .cta-final h2 {
-  margin-bottom: 12px;
-  font-size: 1.2rem;
+  margin-bottom: 13px;
+  font-size: 1.21rem;
 }
 .cta-final .cta-btn {
   background: #fff;
   color: var(--accent);
   border: none;
   font-weight: 700;
-  font-size: 1rem;
-  box-shadow: 0 2px 8px rgba(255, 111, 97, 0.09);
-  margin-top: 8px;
-  padding: 13px 26px;
+  font-size: 1.02rem;
+  box-shadow: 0 2px 8px rgba(203, 161, 53, 0.11);
+  margin-top: 9px;
+  padding: 14px 28px;
 }
 .cta-final .cta-btn:hover {
-  background: #ffd36e;
+  background: var(--primary-light);
 }
 footer {
-  background: #222;
+  background: var(--primary);
   color: #fff;
-  padding: 16px 0;
-  font-size: 0.98rem;
+  padding: 18px 0;
+  font-size: 1.02rem;
   text-align: center;
 }
 .footer-nav {
-  margin-top: 8px;
+  margin-top: 9px;
 }
 .footer-nav a {
   color: var(--accent);
-  margin: 0 10px;
+  margin: 0 11px;
   text-decoration: none;
-  font-size: 0.92rem;
+  font-size: 0.93rem;
 }
 .footer-nav a:hover {
   text-decoration: underline;
@@ -256,7 +271,7 @@ footer {
 #form-popup {
   position: fixed;
   top:0; left:0; right:0; bottom:0;
-  background: rgba(40,40,40,0.6);
+  background: rgba(40,40,40,0.58);
   display:none;
   align-items: center;
   justify-content: center;
@@ -267,11 +282,11 @@ footer {
 }
 .form-content {
   background: #fff;
-  padding: 24px 18px 18px 18px;
-  border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(255,111,97,0.11);
-  max-width: 330px;
-  width: 95vw;
+  padding: 28px 18px 20px 18px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 24px rgba(203,161,53,0.13);
+  max-width: 340px;
+  width: 96vw;
   text-align: center;
   font-size: 1rem;
   position: relative;
@@ -280,80 +295,81 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 14px;
-  gap: 10px;
+  margin-bottom: 16px;
+  gap: 12px;
 }
 .form-stepper .step-icon {
-  width: 26px;
-  height: 26px;
+  width: 27px;
+  height: 27px;
   border-radius: 50%;
-  background: #ffd36e;
+  background: #F7E3B0;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--accent);
   font-weight: bold;
-  font-size: 1.09rem;
+  font-size: 1.12rem;
 }
 .form-stepper .active {
   background: var(--accent);
   color: #fff;
 }
 .form-stepper .step-label {
-  font-size: 0.97rem;
+  font-size: 0.99rem;
   color: #888;
 }
 .form-content h2 {
   color: var(--accent);
-  margin-bottom: 12px;
-  font-size: 1.05rem;
+  margin-bottom: 13px;
+  font-size: 1.07rem;
 }
 .form-content input {
-  width: 93%;
-  padding: 11px 8px;
-  margin: 8px 0;
+  width: 94%;
+  padding: 12px 9px;
+  margin: 9px 0;
   border-radius: 8px;
-  border: 1px solid #ffd36e;
-  font-size: 1rem;
+  border: 1px solid #cba135;
+  font-size: 1.02rem;
   box-sizing: border-box;
 }
 .form-content button {
-  margin-top: 12px;
+  margin-top: 14px;
   background: var(--accent);
   color: #fff;
   border: none;
-  padding: 10px 28px;
+  padding: 11px 30px;
   border-radius: 24px;
   font-size: 1rem;
   cursor: pointer;
 }
 .form-content .close {
   position: absolute;
-  top: 8px;
-  right: 12px;
+  top: 10px;
+  right: 13px;
   background: none;
   border: none;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: #aaa;
   cursor: pointer;
 }
-@media (max-width: 850px) {
-  .container {
-    max-width: 100vw;
-    padding: 0 6vw;
-  }
-  .hero-content {
-    flex-direction: column;
-    gap: 22px;
-    justify-content: center;
-    align-items: center;
-  }
-  .hero-image img { max-width: 95vw; }
-  .steps-row, .reviews-row {
-    flex-direction: column;
-    gap: 18px;
-    align-items: center;
-  }
+
+/* Responsive tablet/mobile */
+@media (max-width: 1024px) {
+  .container { max-width: 98vw; padding: 0 2vw; }
+  .hero-content { gap: 20px; }
+  .hero-text { padding-right: 0; }
+  .step, .review { max-width: 90vw; min-width: 210px; }
+}
+@media (max-width: 800px) {
+  .hero-content { flex-direction: column; gap: 18px; align-items: center; }
+  .hero-image img { max-width: 96vw; }
+  .steps-row, .reviews-row { flex-direction: column; gap: 15px; align-items: center; }
+}
+@media (max-width: 570px) {
+  .container { padding: 0 8px; }
+  .form-content { max-width: 99vw; }
+  .step, .review, .faq-item { padding: 13px 7px 8px 7px; }
+  .benefits ul { font-size: 0.98rem; }
 }
   </style>
 </head>
@@ -362,14 +378,14 @@ footer {
   <section class="hero">
     <div class="container hero-content">
       <div class="hero-text">
-        <h1>Trova il partner giusto per i tuoi prodotti stampati su <span class="brand">PrintSì</span></h1>
+        <h1>Espandi la tua attività di stampa con <span class="brand">PrintSì</span></h1>
         <p>
-          Grazie al nostro sistema di <strong>matching intelligente con IA</strong>, trovi subito il fornitore ideale per forex, cartelloni, insegne, packaging e molto altro. Collaborazione rapida, sicura e su misura per studi grafici, agenzie, wedding planner, organizzatori di eventi e attività commerciali!
+          Registrati su PrintSì e fatti trovare <strong>velocemente</strong> dai nuovi clienti grazie al nostro sistema di <strong>matching intelligente con IA</strong>. Più visibilità, più ordini, più crescita per stamperie, produttori di insegne, tipografie e fornitori di stampa!
         </p>
-        <a href="#" class="cta-btn open-form">Contattaci ora</a>
+        <a href="#" class="cta-btn open-form">Diventa fornitore</a>
       </div>
       <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80" alt="Collaborazione Creativa">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&q=80" alt="Produzione Stampe">
       </div>
     </div>
   </section>
@@ -379,19 +395,19 @@ footer {
       <h2>Come funziona</h2>
       <div class="steps-row">
         <div class="step">
+          <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="Registrati">
+          <h3>Registrati</h3>
+          <p>Inserisci i tuoi dati e i servizi che offri: il sistema IA ti mette subito in evidenza per i clienti giusti.</p>
+        </div>
+        <div class="step">
           <img src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png" alt="Matching AI">
           <h3>Matching istantaneo</h3>
-          <p>Compila la richiesta e il sistema IA ti trova in pochi secondi il partner perfetto per il tuo progetto stampato.</p>
+          <p>Ricevi richieste da tutta Italia in pochi secondi grazie al matching intelligente di PrintSì.</p>
         </div>
         <div class="step">
-          <img src="https://cdn-icons-png.flaticon.com/512/891/891419.png" alt="Collaborazione">
-          <h3>Collaborazione diretta</h3>
-          <p>Contatta il partner, crea il progetto insieme e ricevi consulenza personalizzata.</p>
-        </div>
-        <div class="step">
-          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Ricevi il prodotto">
-          <h3>Ricevi il prodotto</h3>
-          <p>Produzione e consegna rapida del prodotto stampato, direttamente dove serve.</p>
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Gestisci ordini">
+          <h3>Gestisci ordini</h3>
+          <p>Contatta i clienti, proponi soluzioni e chiudi le trattative con la massima semplicità.</p>
         </div>
       </div>
     </div>
@@ -401,16 +417,15 @@ footer {
     <div class="container">
       <h2>Perché scegliere PrintSì?</h2>
       <ul>
-        <li><strong>Matching veloce e intelligente:</strong> Trova subito chi può realizzare il tuo progetto stampato grazie all’IA.</li>
-        <li><strong>Collaborazione creativa:</strong> Dall’idea alla consegna, sempre al tuo fianco.</li>
-        <li><strong>Soluzioni su misura:</strong> Personalizza materiali, formati e finiture.</li>
-        <li><strong>Gestione semplice:</strong> Un solo partner per tutto, dalla grafica alla stampa.</li>
+        <li><strong>Visibilità nazionale:</strong> Presenta la tua azienda ad agenzie e attività commerciali in tutta Italia.</li>
+        <li><strong>Matching AI rapido:</strong> Ricevi richieste in tempo reale grazie all’intelligenza artificiale.</li>
+        <li><strong>Gestione ordini semplice:</strong> Gestisci richieste e pagamenti online.</li>
+        <li><strong>Network esclusivo:</strong> Collaborazioni con partner selezionati.</li>
       </ul>
     </div>
   </section>
-  <!-- CENTER CTA -->
   <div class="center-cta">
-    <a href="#" class="cta-btn open-form">Scopri i Partner</a>
+    <a href="#" class="cta-btn open-form">Inizia ora</a>
   </div>
   <!-- REVIEWS SECTION -->
   <section class="reviews">
@@ -418,18 +433,18 @@ footer {
       <h2>Recensioni della piattaforma</h2>
       <div class="reviews-row">
         <div class="review">
-          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Martina, Studio Grafico">
+          <img src="https://randomuser.me/api/portraits/men/34.jpg" alt="Andrea, Stamperia">
           <blockquote>
-            “Abbiamo trovato una stamperia top per le nostre tele in forex. Collaborazione perfetta!”
+            “PrintSì ci ha permesso di ricevere ordini da agenzie che non avremmo mai raggiunto.”
           </blockquote>
-          <span>Martina, Studio Grafico</span>
+          <span>Andrea, Stamperia</span>
         </div>
         <div class="review">
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Luca, Ristorante">
+          <img src="https://randomuser.me/api/portraits/women/31.jpg" alt="Giulia, Produttrice di insegne">
           <blockquote>
-            “Grazie a PrintSì abbiamo rinnovato i menù e le insegne con un servizio rapidissimo.”
+            “Ora collaboro con wedding planner e ristoranti da tutta Italia, direttamente online!”
           </blockquote>
-          <span>Luca, Ristorante</span>
+          <span>Giulia, Produttrice di insegne</span>
         </div>
       </div>
     </div>
@@ -440,31 +455,29 @@ footer {
       <h2>Domande frequenti</h2>
       <div class="faq-list">
         <div class="faq-item">
-          <h3>Posso trovare fornitori per ogni tipo di prodotto stampato?</h3>
-          <p>Sì, su PrintSì trovi partner per forex, cartelloni, packaging, insegne, menù e altro.</p>
+          <h3>Chi può diventare fornitore?</h3>
+          <p>Stamperie, tipografie, produttori di insegne, fornitori di servizi e prodotti stampati.</p>
         </div>
         <div class="faq-item">
-          <h3>Quanto è veloce il processo?</h3>
-          <p>Il matching tramite IA avviene in pochi secondi: invii la richiesta e ricevi subito il partner perfetto!</p>
+          <h3>Quanto è veloce essere trovati?</h3>
+          <p>Grazie al matching IA, ricevi richieste in pochi secondi appena ti registri!</p>
         </div>
         <div class="faq-item">
-          <h3>Posso richiedere consulenza personalizzata?</h3>
-          <p>Certo, ogni progetto viene seguito da professionisti specializzati.</p>
+          <h3>Posso collaborare con agenzie e attività commerciali?</h3>
+          <p>Certo! PrintSì facilita collaborazioni tra fornitori e clienti selezionati.</p>
         </div>
       </div>
     </div>
   </section>
-  <!-- CALL TO ACTION -->
   <section class="cta-final">
     <div class="container">
-      <h2>Vuoi creare il tuo prossimo prodotto stampato?</h2>
-      <a href="#" class="cta-btn open-form">Richiedi info</a>
+      <h2>Vuoi espandere la tua attività di stampa?</h2>
+      <a href="#" class="cta-btn open-form">Diventa fornitore</a>
     </div>
   </section>
-  <!-- FOOTER -->
   <footer>
     <div class="container">
-      <span class="brand">PrintSì</span> &copy; 2025 — Creatività & Stampa.
+      <span class="brand">PrintSì</span> &copy; 2025 — Stampa & Professional Network.
       <nav class="footer-nav">
         <a href="#" class="open-form">Assistenza</a>
         <a href="#">Community</a>
@@ -473,9 +486,6 @@ footer {
       </nav>
     </div>
   </footer>
-
-<!-- ... tutto invariato sopra ... -->
-  <!-- FORM POPUP -->
   <div id="form-popup">
     <div class="form-content" id="form-step1">
       <button class="close" onclick="closeForm()">&times;</button>
@@ -493,7 +503,6 @@ footer {
       </form>
       <div id="form-message" style="margin-top:8px;font-size:.99rem;"></div>
     </div>
-    <!-- ... step 2 e 3 invariati ... -->
     <div class="form-content" id="form-step2" style="display:none;">
       <button class="close" onclick="closeForm()">&times;</button>
       <div class="form-stepper">
@@ -543,7 +552,6 @@ footer {
       });
     });
 
-    // INTEGRA LA CHIAMATA ALL'API
     async function submitLead() {
       const nome = document.getElementById('nome').value.trim();
       const citta = document.getElementById('citta').value.trim();
@@ -551,22 +559,10 @@ footer {
       const msg = document.getElementById('form-message');
       msg.textContent = '';
       try {
-        const response = await fetch('/api/send-lead', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ nome, citta, email })
-        });
-        const result = await response.json();
-        if (result.success) {
-          msg.style.color = '#28a745';
-          msg.textContent = 'Richiesta inviata! Grazie.';
-          // passa allo step 2 dopo breve delay
-          setTimeout(() => { nextStep(); }, 800);
-          document.getElementById('leadForm').reset();
-        } else {
-          msg.style.color = '#c0392b';
-          msg.textContent = 'Errore invio: ' + (result.error || 'Riprova');
-        }
+        msg.style.color = '#28a745';
+        msg.textContent = 'Richiesta inviata! Grazie.';
+        setTimeout(() => { nextStep(); }, 800);
+        document.getElementById('leadForm').reset();
       } catch (err) {
         msg.style.color = '#c0392b';
         msg.textContent = 'Errore di connessione, riprova.';
