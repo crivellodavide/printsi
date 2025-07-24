@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PrintSì - Trova il tuo partner creativo</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --accent: #ff6f61;
+  --accent-dark: #e04f3b;
+  --bg: #f9f7f7;
+  --cta-bg: #ff6f61;
+  --cta-color: #fff;
+}
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: var(--bg);
+  color: #222;
+  margin: 0;
+}
+.brand {
+  color: var(--accent);
+  font-weight: 700;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.hero {
+  background: linear-gradient(120deg, #ff6f61 0%, #ffd36e 100%);
+  padding: 48px 0;
+}
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 32px;
+  justify-content: space-between;
+}
+.hero-text {
+  flex: 1 1 320px;
+  color: #fff;
+  min-width: 250px;
+}
+.hero-text h1 {
+  font-size: 2.1rem;
+  margin-bottom: 16px;
+}
+.hero-text p {
+  font-size: 1.08rem;
+  margin-bottom: 24px;
+}
+.cta-btn {
+  background: var(--cta-bg);
+  color: var(--cta-color);
+  padding: 14px 28px;
+  border-radius: 32px;
+  font-size: 1.08rem;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background 0.2s;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(255, 111, 97, 0.15);
+}
+.cta-btn:hover {
+  background: var(--accent-dark);
+}
+.hero-image img {
+  max-width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  width: 100%;
+}
+.steps, .benefits, .reviews, .faq, .cta-final {
+  background: #fff;
+}
+.steps {
+  padding: 40px 0 28px 0;
+}
+.steps h2 {
+  text-align: center;
+  font-size: 1.45rem;
+  margin-bottom: 28px;
+  color: var(--accent);
+}
+.steps-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+.step {
+  background: #f9f7f7;
+  border-radius: 12px;
+  flex: 1 1 180px;
+  max-width: 200px;
+  text-align: center;
+  padding: 18px 10px;
+  box-shadow: 0 4px 16px rgba(255, 111, 97, 0.06);
+  min-width: 150px;
+}
+.step img {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 10px;
+}
+.step h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: var(--accent);
+}
+.benefits {
+  background: #fff6e6;
+  padding: 36px 0;
+}
+.benefits h2 {
+  text-align: center;
+  margin-bottom: 18px;
+  color: var(--accent);
+  font-size: 1.25rem;
+}
+.benefits ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.benefits li {
+  margin-bottom: 12px;
+  font-size: 1.03rem;
+}
+.center-cta {
+  text-align: center;
+  margin: 36px 0 16px 0;
+}
+.center-cta .cta-btn {
+  font-size: 1.05rem;
+  padding: 13px 26px;
+}
+.reviews {
+  padding: 36px 0;
+}
+.reviews h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: var(--accent);
+  font-size: 1.18rem;
+}
+.reviews-row {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.review {
+  background: #f9f7f7;
+  border-radius: 12px;
+  padding: 18px 14px;
+  max-width: 220px;
+  min-width: 160px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(255, 111, 97, 0.06);
+}
+.review img {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.review blockquote {
+  font-style: italic;
+  margin-bottom: 10px;
+  font-size: 0.97rem;
+}
+.review span {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.faq {
+  padding: 36px 0 22px 0;
+}
+.faq h2 {
+  text-align: center;
+  margin-bottom: 16px;
+  color: var(--accent);
+  font-size: 1.15rem;
+}
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.faq-item {
+  background: #f9f7f7;
+  border-radius: 12px;
+  padding: 14px 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 10px rgba(255, 111, 97, 0.03);
+}
+.faq-item h3 {
+  margin-bottom: 6px;
+  font-size: 1rem;
+  color: var(--accent);
+}
+.cta-final {
+  background: var(--cta-bg);
+  color: #fff;
+  text-align: center;
+  padding: 28px 0;
+}
+.cta-final h2 {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+.cta-final .cta-btn {
+  background: #fff;
+  color: var(--accent);
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(255, 111, 97, 0.09);
+  margin-top: 8px;
+  padding: 13px 26px;
+}
+.cta-final .cta-btn:hover {
+  background: #ffd36e;
+}
+footer {
+  background: #222;
+  color: #fff;
+  padding: 16px 0;
+  font-size: 0.98rem;
+  text-align: center;
+}
+.footer-nav {
+  margin-top: 8px;
+}
+.footer-nav a {
+  color: var(--accent);
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 0.92rem;
+}
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+/* FORM POPUP */
+#form-popup {
+  position: fixed;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(40,40,40,0.6);
+  display:none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+#form-popup.visible {
+  display: flex;
+}
+.form-content {
+  background: #fff;
+  padding: 24px 18px 18px 18px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(255,111,97,0.11);
+  max-width: 330px;
+  width: 95vw;
+  text-align: center;
+  font-size: 1rem;
+  position: relative;
+}
+.form-stepper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 14px;
+  gap: 10px;
+}
+.form-stepper .step-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #ffd36e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 1.09rem;
+}
+.form-stepper .active {
+  background: var(--accent);
+  color: #fff;
+}
+.form-stepper .step-label {
+  font-size: 0.97rem;
+  color: #888;
+}
+.form-content h2 {
+  color: var(--accent);
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+.form-content input {
+  width: 93%;
+  padding: 11px 8px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ffd36e;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.form-content button {
+  margin-top: 12px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 24px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.form-content .close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: #aaa;
+  cursor: pointer;
+}
+@media (max-width: 850px) {
+  .container {
+    max-width: 100vw;
+    padding: 0 6vw;
+  }
+  .hero-content {
+    flex-direction: column;
+    gap: 22px;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-image img { max-width: 95vw; }
+  .steps-row, .reviews-row {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+  }
+}
+  </style>
+</head>
+<body>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Trova il partner giusto per i tuoi prodotti stampati su <span class="brand">PrintSì</span></h1>
+        <p>
+          Grazie al nostro sistema di <strong>matching intelligente con IA</strong>, trovi subito il fornitore ideale per forex, cartelloni, insegne, packaging e molto altro. Collaborazione rapida, sicura e su misura per studi grafici, agenzie, wedding planner, organizzatori di eventi e attività commerciali!
+        </p>
+        <a href="#" class="cta-btn open-form">Contattaci ora</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80" alt="Collaborazione Creativa">
+      </div>
+    </div>
+  </section>
+  <!-- STEPS SECTION -->
+  <section class="steps">
+    <div class="container">
+      <h2>Come funziona</h2>
+      <div class="steps-row">
+        <div class="step">
+          <img src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png" alt="Matching AI">
+          <h3>Matching istantaneo</h3>
+          <p>Compila la richiesta e il sistema IA ti trova in pochi secondi il partner perfetto per il tuo progetto stampato.</p>
+        </div>
+        <div class="step">
+          <img src="https://cdn-icons-png.flaticon.com/512/891/891419.png" alt="Collaborazione">
+          <h3>Collaborazione diretta</h3>
+          <p>Contatta il partner, crea il progetto insieme e ricevi consulenza personalizzata.</p>
+        </div>
+        <div class="step">
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Ricevi il prodotto">
+          <h3>Ricevi il prodotto</h3>
+          <p>Produzione e consegna rapida del prodotto stampato, direttamente dove serve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- BENEFITS SECTION -->
+  <section class="benefits">
+    <div class="container">
+      <h2>Perché scegliere PrintSì?</h2>
+      <ul>
+        <li><strong>Matching veloce e intelligente:</strong> Trova subito chi può realizzare il tuo progetto stampato grazie all’IA.</li>
+        <li><strong>Collaborazione creativa:</strong> Dall’idea alla consegna, sempre al tuo fianco.</li>
+        <li><strong>Soluzioni su misura:</strong> Personalizza materiali, formati e finiture.</li>
+        <li><strong>Gestione semplice:</strong> Un solo partner per tutto, dalla grafica alla stampa.</li>
+      </ul>
+    </div>
+  </section>
+  <!-- CENTER CTA -->
+  <div class="center-cta">
+    <a href="#" class="cta-btn open-form">Scopri i Partner</a>
+  </div>
+  <!-- REVIEWS SECTION -->
+  <section class="reviews">
+    <div class="container">
+      <h2>Recensioni della piattaforma</h2>
+      <div class="reviews-row">
+        <div class="review">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Martina, Studio Grafico">
+          <blockquote>
+            “Abbiamo trovato una stamperia top per le nostre tele in forex. Collaborazione perfetta!”
+          </blockquote>
+          <span>Martina, Studio Grafico</span>
+        </div>
+        <div class="review">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Luca, Ristorante">
+          <blockquote>
+            “Grazie a PrintSì abbiamo rinnovato i menù e le insegne con un servizio rapidissimo.”
+          </blockquote>
+          <span>Luca, Ristorante</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FAQ SECTION -->
+  <section class="faq">
+    <div class="container">
+      <h2>Domande frequenti</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>Posso trovare fornitori per ogni tipo di prodotto stampato?</h3>
+          <p>Sì, su PrintSì trovi partner per forex, cartelloni, packaging, insegne, menù e altro.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Quanto è veloce il processo?</h3>
+          <p>Il matching tramite IA avviene in pochi secondi: invii la richiesta e ricevi subito il partner perfetto!</p>
+        </div>
+        <div class="faq-item">
+          <h3>Posso richiedere consulenza personalizzata?</h3>
+          <p>Certo, ogni progetto viene seguito da professionisti specializzati.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CALL TO ACTION -->
+  <section class="cta-final">
+    <div class="container">
+      <h2>Vuoi creare il tuo prossimo prodotto stampato?</h2>
+      <a href="#" class="cta-btn open-form">Richiedi info</a>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <span class="brand">PrintSì</span> &copy; 2025 — Creatività & Stampa.
+      <nav class="footer-nav">
+        <a href="#" class="open-form">Assistenza</a>
+        <a href="#">Community</a>
+        <a href="#">Termini</a>
+        <a href="#">Privacy</a>
+      </nav>
+    </div>
+  </footer>
+  <!-- FORM POPUP -->
+  <div id="form-popup">
+    <div class="form-content" id="form-step1">
+      <button class="close" onclick="closeForm()">&times;</button>
+      <div class="form-stepper">
+        <div class="step-icon active">1</div>
+        <span class="step-label">di 3</span>
+        <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" height="26" style="margin-left:8px;">
+      </div>
+      <h2>Dati di Contatto</h2>
+      <form onsubmit="event.preventDefault(); nextStep();">
+        <input type="text" placeholder="Nome" required>
+        <input type="text" placeholder="Città" required>
+        <input type="email" placeholder="Email" required>
+        <button type="submit">Avanti</button>
+      </form>
+    </div>
+    <div class="form-content" id="form-step2" style="display:none;">
+      <button class="close" onclick="closeForm()">&times;</button>
+      <div class="form-stepper">
+        <div class="step-icon active">2</div>
+        <span class="step-label">di 3</span>
+        <img src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png" height="26" style="margin-left:8px;">
+      </div>
+      <h2>Grazie!</h2>
+      <p>Questa era una prova.<br>Verrai contattato in modo esclusivo tra i primi 1000 utilizzatori.</p>
+      <button onclick="nextStep()">Avanti</button>
+    </div>
+    <div class="form-content" id="form-step3" style="display:none;">
+      <button class="close" onclick="closeForm()">&times;</button>
+      <div class="form-stepper">
+        <div class="step-icon active">3</div>
+        <span class="step-label">di 3</span>
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" height="26" style="margin-left:8px;">
+      </div>
+      <h2>Attendi!</h2>
+      <p>Stiamo elaborando la tua richiesta.<br>Riceverai presto una risposta dal nostro team.</p>
+      <button onclick="closeForm()">Chiudi</button>
+    </div>
+  </div>
+  <script>
+    function openForm() {
+      document.getElementById('form-popup').classList.add('visible');
+      document.getElementById('form-step1').style.display = '';
+      document.getElementById('form-step2').style.display = 'none';
+      document.getElementById('form-step3').style.display = 'none';
+    }
+    function closeForm() {
+      document.getElementById('form-popup').classList.remove('visible');
+    }
+    function nextStep() {
+      if (document.getElementById('form-step1').style.display !== 'none') {
+        document.getElementById('form-step1').style.display = 'none';
+        document.getElementById('form-step2').style.display = '';
+      } else if (document.getElementById('form-step2').style.display !== 'none') {
+        document.getElementById('form-step2').style.display = 'none';
+        document.getElementById('form-step3').style.display = '';
+      }
+    }
+    document.querySelectorAll('.open-form').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        openForm();
+      });
+    });
+  </script>
+</body>
+</html>
