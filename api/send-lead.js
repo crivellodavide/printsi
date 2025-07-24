@@ -13,6 +13,7 @@ export default async function handler(req, res) {
     return;
   }
 
+  // CHIAVE API DIRETTA
   const resend = new Resend('re_L2v8q85T_7A2HpUUH7D2wHXh7xyNnpnNz');
 
   try {
