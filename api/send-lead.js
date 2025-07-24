@@ -18,7 +18,7 @@ export default async function handler(req, res) {
   try {
     await resend.emails.send({
       from: 'form@printsi.it',
-      to: 'info@printsi.it',
+      to: 'crivello.da@gmail.com',
       subject: 'Nuova lead PrintSì',
       text: `Nuova lead:\nNome: ${nome}\nCittà: ${citta}\nEmail: ${email}\nData: ${new Date().toISOString()}`
     });
