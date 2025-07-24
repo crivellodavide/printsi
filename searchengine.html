@@ -471,6 +471,7 @@ footer {
       </nav>
     </div>
   </footer>
+ 
   <!-- FORM POPUP -->
   <div id="form-popup">
     <div class="form-content" id="form-step1">
@@ -481,13 +482,15 @@ footer {
         <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" height="26" style="margin-left:8px;">
       </div>
       <h2>Dati di Contatto</h2>
-      <form onsubmit="event.preventDefault(); nextStep();">
-        <input type="text" placeholder="Nome" required>
-        <input type="text" placeholder="Città" required>
-        <input type="email" placeholder="Email" required>
+      <form id="leadForm" onsubmit="event.preventDefault(); submitLead();">
+        <input type="text" id="nome" placeholder="Nome" required>
+        <input type="text" id="citta" placeholder="Città" required>
+        <input type="email" id="email" placeholder="Email" required>
         <button type="submit">Avanti</button>
       </form>
+      <div id="form-message" style="margin-top:8px;font-size:.99rem;"></div>
     </div>
+    <!-- ... step 2 e 3 invariati ... -->
     <div class="form-content" id="form-step2" style="display:none;">
       <button class="close" onclick="closeForm()">&times;</button>
       <div class="form-stepper">
@@ -536,6 +539,36 @@ footer {
         openForm();
       });
     });
+
+    // INTEGRA LA CHIAMATA ALL'API
+    async function submitLead() {
+      const nome = document.getElementById('nome').value.trim();
+      const citta = document.getElementById('citta').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg = document.getElementById('form-message');
+      msg.textContent = '';
+      try {
+        const response = await fetch('/api/send-lead', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ nome, citta, email })
+        });
+        const result = await response.json();
+        if (result.success) {
+          msg.style.color = '#28a745';
+          msg.textContent = 'Richiesta inviata! Grazie.';
+          // passa allo step 2 dopo breve delay
+          setTimeout(() => { nextStep(); }, 800);
+          document.getElementById('leadForm').reset();
+        } else {
+          msg.style.color = '#c0392b';
+          msg.textContent = 'Errore invio: ' + (result.error || 'Riprova');
+        }
+      } catch (err) {
+        msg.style.color = '#c0392b';
+        msg.textContent = 'Errore di connessione, riprova.';
+      }
+    }
   </script>
 </body>
 </html>
